@@ -1,0 +1,16 @@
+<aspectj>
+  <aspects>
+    <aspect name="kieker.monitoring.probe.aspectj.operationExecution.OperationExecutionAspectFull"/>
+  </aspects>
+  <weaver options="-Xlint:ignore">
+    <include within="net.jforum.JForum"/>
+    <include within="net.jforum.view..*"/>
+    <include within="net.jforum.dao..*"/>
+    <include within="net.jforum.repository..*"/>
+    <include within="net.jforum.search..*"/>
+    <exclude within="net.jforum.entities..*"/>
+    <exclude within="net.jforum.context..*"/>
+    <exclude within="kieker.monitoring..*"/>
+    <exclude within="org.aspectj..*"/>
+  </weaver>
+</aspectj>

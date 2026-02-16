@@ -94,6 +94,11 @@
 				<path refid="base.path" />
 			</classpath>
 		</javac>
+		<copy todir="${classes.dir}" failonerror="false">
+			<fileset dir="${src.dir}">
+				<include name="META-INF/**/*" />
+			</fileset>
+		</copy>
 	</target>
 
 	<!-- Dist -->

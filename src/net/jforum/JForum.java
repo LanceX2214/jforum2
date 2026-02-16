@@ -53,6 +53,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import kieker.monitoring.core.controller.MonitoringController;
 import net.jforum.context.JForumContext;
 import net.jforum.context.RequestContext;
 import net.jforum.context.ResponseContext;
@@ -314,5 +315,8 @@ public class JForum extends JForumBaseServlet
 			ConfigLoader.stopCacheEngine();
 		}
 		catch (Exception e) { }
+		finally {
+			MonitoringController.getInstance().terminateMonitoring();
+		}
 	}
 }

@@ -3,3 +3,6 @@ upload/
 tmp/
 .tomcatplugin
 WEB-INF/jforumLuceneIndex/*
+build/
+dist/
+trace-analysis-output/
